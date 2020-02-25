@@ -1,0 +1,33 @@
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+  
+      <!-- Icon -->
+      <div class="fadeIn first">
+        <span class="login-header">REGISTRARSE</span>
+      </div>
+  
+      <!-- Login Form -->
+      <form>
+        <input type="text" id="username" class="fadeIn second form-control" name="username" placeholder="Usuario"
+        minlength="4" [(ngModel)]="user.name" #name="ngModel" required>
+
+        <input type="text" id="email" class="fadeIn second form-control" name="email" placeholder="Email"
+        [(ngModel)]="user.email" #name="ngModel" required>
+
+        <input type="text" id="password" class="fadeIn third form-control" name="password"
+         placeholder="Contraseña" [(ngModel)]="user.password" #name="ngModel" required>
+
+         <input type="text" id="password2" class="fadeIn third form-control" name="password2"
+         placeholder="Repite contraseña" required>
+
+        <input type="submit" class="fadeIn fourth" value="Registrarse">
+      </form>
+  
+      <!-- Remind Passowrd -->
+      <div id="formFooter">
+        Ya tienes cuenta? <a class="underlineHover" [routerLink]="['/login']">Logueate</a>
+      </div>
+  
+    </div>
+  </div>
