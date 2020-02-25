@@ -38,8 +38,7 @@ public class VentaController {
                 .defaultIfEmpty(ResponseEntity.notFound().build());
     }
 
-    @PutMapping("/{id}")//Mono<ResponseEntity<User>>
-
+    @PutMapping("/{id}")
      public Mono<ResponseEntity<Venta>> updatePersonById(@PathVariable(value = "id") String id,
                     Venta venta) {
         return repository.findById(id)
