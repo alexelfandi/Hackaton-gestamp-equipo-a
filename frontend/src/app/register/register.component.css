@@ -28,7 +28,7 @@ html {
   }
 
   .login-header{
-      margin: 30px;
+      margin-bottom: 20px;
       font-size: 40px;
       font-family: 'Kaushan Script', cursive;
   }
@@ -55,22 +55,20 @@ html {
     width: 90%;
     max-width: 450px;
     position: relative;
-    padding: 0px;
+    /*padding: 0px;*/
     -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
     box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
     text-align: center;
   }
   
   #formFooter {
-    background-color: #f6f6f6;
+    /*background-color: #f6f6f6;*/
     border-top: 1px solid #dce8f1;
     padding: 25px;
     text-align: center;
     -webkit-border-radius: 0 0 10px 10px;
     border-radius: 0 0 10px 10px;
   }
-  
-  
   
   /* TABS */
   
@@ -82,8 +80,6 @@ html {
     color: #0d0d0d;
     border-bottom: 2px solid #5fbae9;
   }
-  
-  
   
   /* FORM TYPOGRAPHY*/
   
@@ -212,6 +208,7 @@ html {
   }
   
   .fadeIn.first {
+    margin-bottom: 20px;
     -webkit-animation-delay: 0.4s;
     -moz-animation-delay: 0.4s;
     animation-delay: 0.4s;

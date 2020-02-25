@@ -1,16 +1,26 @@
 <div class="wrapper fadeInDown">
     <div id="formContent">
-      <!-- Tabs Titles -->
-  
-      <!-- Icon -->
       <div class="fadeIn first">
         <span class="login-header">REGISTRARSE</span>
       </div>
-  
       <!-- Login Form -->
-      <form>
+      <form [formGroup]="angForm" novalidate>
         <input type="text" id="username" class="fadeIn second form-control" name="username" placeholder="Usuario"
         minlength="4" [(ngModel)]="user.name" #name="ngModel" required>
+
+        <div *ngIf="user.invalid && (user.dirty || user.touched)" class="alert alert-danger">
+
+          <div *ngIf="user.errors.required">
+            Name is required.
+          </div>
+          <div *ngIf="user.errors.minlength">
+            Name must be at least 4 characters long.
+          </div>
+          <div *ngIf="user.errors.forbiddenName">
+            Name cannot be Bob.
+          </div>
+
+        </div>
 
         <input type="text" id="email" class="fadeIn second form-control" name="email" placeholder="Email"
         [(ngModel)]="user.email" #name="ngModel" required>
