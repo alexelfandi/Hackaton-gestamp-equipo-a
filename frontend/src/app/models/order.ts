@@ -1,4 +1,4 @@
-export  interface  User {
+export  class  Order {
     region:string;
     country:string;
     itemType:string;

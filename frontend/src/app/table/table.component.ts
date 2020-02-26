@@ -4,6 +4,7 @@ import {MatTableDataSource} from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { InfoModalComponent } from '../info-modal/info-modal.component';
+import { VentasService } from '../services/ventas.service';
 
 
 export interface PeriodicElement {
@@ -51,15 +52,20 @@ export class TableComponent implements OnInit {
   filterData;
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol', 'action'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
+  arrayVentas = [];
+
 
   @ViewChild(MatSort, {static: true}) sort: MatSort;
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
-  constructor(public dialog: MatDialog,private changeDetectorRefs: ChangeDetectorRef) { }
+  constructor(public dialog: MatDialog,private changeDetectorRefs: ChangeDetectorRef, private servicioVentas: VentasService) { }
 
   ngOnInit() {
     this.dataSource.sort = this.sort;
     this.dataSource.paginator = this.paginator;
+    this.servicioVentas.getAll().subscribe((datos) =>{
+      this.arrayVentas = datos;
+    });
   }
 
   openDialog(selectedItem): void {
