@@ -4,6 +4,7 @@ import { LoginComponent } from './login/login.component';
 import { IndexComponent } from './index/index.component';
 import { RegisterComponent } from './register/register.component';
 import { AuthGuard } from './services/guard/auth.guard';
+import { TableComponent } from './table/table.component';
 
 
 
@@ -25,6 +26,10 @@ const routes: Routes = [
   {
     path: 'register',
     component: RegisterComponent
+  },
+  {
+    path: 'table',
+    component: TableComponent
   },
 ];
 
