@@ -38,7 +38,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
     MatPaginatorModule,
     MatSortModule,
     MatDialogModule,
-    HttpClient
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],
