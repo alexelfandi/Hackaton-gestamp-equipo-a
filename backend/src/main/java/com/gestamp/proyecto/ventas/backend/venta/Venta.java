@@ -15,46 +15,46 @@ public class Venta {
 
     @NotNull
     @NotBlank
-    public String region;
+    public String Region;
     @NotNull
     @NotBlank
-    public String country;
+    public String Country;
     @NotNull
     @NotBlank
-    public String item_type;
+    public String ItemType;
     @NotNull
     @NotBlank
-    public String sales_channel;
+    public String SalesChannel;
     @NotNull
     @NotBlank
-    public String order_priority;
+    public String OrderPriority;
     @NotNull
     @NotBlank
-    public Date order_date;
+    public Date OrderDate;
     @NotNull
     @NotBlank
-    public String order_id;
+    public String OrderId;
     @NotNull
     @NotBlank
-    public  Date ship_date;
+    public  Date ShipDate;
     @NotNull
     @NotBlank
-    public Integer units_sold;
+    public Integer UnitsSold;
     @NotNull
     @NotBlank
-    public Double unit_price;
+    public Double UnitPrice;
     @NotNull
     @NotBlank
-    public Double unit_cost;
+    public Double UnitCost;
     @NotNull
     @NotBlank
-    public  Double total_revenue;
+    public  Double TotalRevenue;
     @NotNull
     @NotBlank
-    public Double total_cost;
+    public Double TotalCost;
     @NotNull
     @NotBlank
-    public Double total_profit;
+    public Double TotalProfit;
 
 
 }
