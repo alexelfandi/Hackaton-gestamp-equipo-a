@@ -1,5 +1,16 @@
 # Hackaton-gestamp-equipo-a
 
+
+## Requisitos
+
+Node js
+
+Angular cli
+
+Docker
+
+MongoDB
+
 ## Preparacion del proyecto
 
 Lo primero, seria descargar los paquetes desde la carpeta frontend y backend
@@ -8,3 +19,4 @@ Lo primero, seria descargar los paquetes desde la carpeta frontend y backend
 
 ## Iniciar proyectos
 
+Desde las carpetas de frontend y backend
