@@ -63,9 +63,15 @@ export class TableComponent implements OnInit {
   ngOnInit() {
     this.dataSource.sort = this.sort;
     this.dataSource.paginator = this.paginator;
-    this.servicioVentas.getAll().subscribe((datos) =>{
-      this.arrayVentas = datos;
-    });
+    try {
+      this.servicioVentas.getAll().subscribe((datos) =>{
+        this.arrayVentas = datos;
+      });
+    } catch (error) {
+      console.log(error);
+      
+    }
+
   }
 
   openDialog(selectedItem): void {
