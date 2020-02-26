@@ -1,4 +1,5 @@
-<input type="text" (keyup)='search($event.target.value)'>
+
+<input class="form-control" type="text" placeholder="Filtra por nombre" (keyup)='search($event.target.value)' aria-label="Search">
 
 <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
 
