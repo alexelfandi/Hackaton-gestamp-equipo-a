@@ -7,7 +7,7 @@ import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 @Data
-@Document(collection="ventas")
+@Document(collection="Ventas")
 public class Venta {
     //Region,Country,Item
     //Type,Sales Channel,Order Priority,Order Date,Order ID,Ship Date,Units

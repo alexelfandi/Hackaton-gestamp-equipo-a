@@ -33,8 +33,6 @@ public class VentaController {
     @PostMapping()
     private Mono<ResponseEntity<Venta>> newVenta (Venta newVenta) {
         return repository.save(newVenta)
-
-
     .map(ResponseEntity::ok)
                 .defaultIfEmpty(ResponseEntity.notFound().build());
     }
