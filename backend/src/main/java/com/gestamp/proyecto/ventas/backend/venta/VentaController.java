@@ -13,12 +13,12 @@ public class VentaController {
 
 
     @GetMapping()
-    private Flux<ResponseEntity<Venta>> getAllVentas() {
+    private Flux<Venta> getAllVentas() {
 
-        return repository.findAll()
+        return repository.findAll();
 
-                .map(venta -> ResponseEntity.ok(venta))
-                .defaultIfEmpty(ResponseEntity.notFound().build());
+               // .map(venta -> ResponseEntity.ok())
+               // .defaultIfEmpty(ResponseEntity.notFound().build());
     }
 
     /*
