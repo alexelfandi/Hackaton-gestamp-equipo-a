@@ -1,4 +1,16 @@
-<h1 mat-dialog-title>Hi {{data.item.symbol}}</h1>
+<h1 mat-dialog-title>{{data.item.name}}</h1>
 <div mat-dialog-content>
-  <p>What's your favorite color? {{data.item}}</p>
+  <b>Information about {{data.item.name}}:</b>
+  <ul>
+    <li>
+      <strong>Name: </strong>{{ data.item.name }}
+    </li>
+    <li>
+      <strong>Weight: </strong>{{ data.item.weight }}
+    </li>
+    <li>
+      <strong>Symbol: </strong>{{ data.item.symbol }}
+    </li>
+  </ul>
+  
 </div>

@@ -16,7 +16,8 @@ import { MatSortModule } from '@angular/material/sort';
 import { InfoModalComponent } from './info-modal/info-modal.component';
 
 import { MatDialogModule } from '@angular/material/dialog';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+import { UpdateModalComponent } from './update-modal/update-modal.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
     IndexComponent,
     RegisterComponent,
     TableComponent,
-    InfoModalComponent
+    InfoModalComponent,
+    UpdateModalComponent
     
   ],
   imports: [
@@ -43,6 +45,6 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
   providers: [],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  entryComponents: [InfoModalComponent]
+  entryComponents: [InfoModalComponent, UpdateModalComponent]
 })
 export class AppModule { }
