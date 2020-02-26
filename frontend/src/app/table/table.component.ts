@@ -2,6 +2,9 @@ import {Component, OnInit, ViewChild} from '@angular/core';
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { InfoModalComponent } from '../info-modal/info-modal.component';
+
 
 export interface PeriodicElement {
   name: string;
@@ -10,7 +13,7 @@ export interface PeriodicElement {
   symbol: string;
 }
 
-const ELEMENT_DATA: PeriodicElement[] = [
+var ELEMENT_DATA: PeriodicElement[] = [
   {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
   {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
   {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li'},
@@ -32,14 +35,43 @@ const ELEMENT_DATA: PeriodicElement[] = [
 
 export class TableComponent implements OnInit {
 
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+  filterData;
+  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol', 'action'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
 
   @ViewChild(MatSort, {static: true}) sort: MatSort;
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
+  constructor(public dialog: MatDialog) { }
+
   ngOnInit() {
     this.dataSource.sort = this.sort;
     this.dataSource.paginator = this.paginator;
   }
+
+  openDialog(selectedItem): void {
+    const dialogRef = this.dialog.open(InfoModalComponent, {
+      width: '400px',
+      data: { item: selectedItem }
+    });
+  }
+
+  deleteItem(item){
+    console.log("Deleting " + item);
+    
+  }
+
+  search(term: string) {
+    if(!term) {
+      this.filterData = ELEMENT_DATA;
+    } else {
+      this.filterData = ELEMENT_DATA.filter(x => 
+         x.name.trim().toLowerCase().includes(term.trim().toLowerCase())
+      );
+      ELEMENT_DATA = this.filterData;
+    }
+    console.log(this.filterData);
+    
+  }
+
 }
