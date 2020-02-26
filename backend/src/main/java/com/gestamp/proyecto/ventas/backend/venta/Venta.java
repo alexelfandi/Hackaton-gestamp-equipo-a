@@ -1,17 +1,12 @@
 package com.gestamp.proyecto.ventas.backend.venta;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 import org.springframework.data.mongodb.core.mapping.Document;
-
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
 @Document(collection="ventas")
 public class Venta {
     //Region,Country,Item
