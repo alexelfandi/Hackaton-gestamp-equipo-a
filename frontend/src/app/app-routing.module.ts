@@ -3,6 +3,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { IndexComponent } from './index/index.component';
 import { RegisterComponent } from './register/register.component';
+import { AuthGuard } from './services/guard/auth.guard';
+
+
 
 
 const routes: Routes = [
@@ -12,7 +15,8 @@ const routes: Routes = [
   },
   {
     path: 'index',
-    component: IndexComponent
+    component: IndexComponent,
+    /*canActivate: [AuthGuard]*/
   },
   {
     path: 'login',
