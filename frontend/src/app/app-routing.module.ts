@@ -4,7 +4,6 @@ import { LoginComponent } from './login/login.component';
 import { IndexComponent } from './index/index.component';
 import { RegisterComponent } from './register/register.component';
 import { AuthGuard } from './services/guard/auth.guard';
-import { OrdersComponent } from './orders/orders.component';
 
 
 
