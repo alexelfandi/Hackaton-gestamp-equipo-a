@@ -15,7 +15,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { InfoModalComponent } from './info-modal/info-modal.component';
 import { MatDialogModule } from '@angular/material/dialog';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -37,7 +38,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
     MatPaginatorModule,
     MatSortModule,
     MatDialogModule,
-    HttpClient
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],
