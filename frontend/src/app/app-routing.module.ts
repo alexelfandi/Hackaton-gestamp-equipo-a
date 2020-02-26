@@ -15,10 +15,6 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'orders',
-    component: OrdersComponent
-  },
-  {
     path: 'index',
     component: IndexComponent,
     /*canActivate: [AuthGuard]*/
