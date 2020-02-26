@@ -1,4 +1,4 @@
-package com.gestamp.proyecto.ventas.backend;
+package com.gestamp.proyecto.ventas.backend.venta;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
