@@ -1,6 +1,8 @@
 package com.gestamp.proyecto.ventas.backend;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -21,8 +23,9 @@ public class VentaController {
 
                 .map(venta -> ResponseEntity.ok(venta))
                 .defaultIfEmpty(ResponseEntity.notFound().build());
+    }
 
-
+    /*
     public Mono<ResponseEntity<Venta>> getVentaById(@PathVariable(value = "id") String id) {
         return repository.findById(id)
                 .map(venta -> ResponseEntity.ok(venta))
@@ -59,4 +62,5 @@ public class VentaController {
                 )
                 .defaultIfEmpty(new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
+    */
 }

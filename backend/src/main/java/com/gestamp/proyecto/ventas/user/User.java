@@ -11,7 +11,7 @@ import javax.validation.constraints.NotNull;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Document(collection="Usuarios")
+@Document(collection="users")
 public class User {
     public String id;
     @NotNull
@@ -20,4 +20,7 @@ public class User {
     @NotBlank
     @NotNull
     public String apellido;
+    @NotBlank
+    @NotNull
+    public String email;
 }
