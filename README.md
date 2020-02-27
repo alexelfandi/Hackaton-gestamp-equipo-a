@@ -5,7 +5,7 @@
 
 Node js
 
-Angular cli
+Angular
 
 Docker
 
@@ -26,3 +26,14 @@ Desde la carpeta de *frontend*, ejecutar el comando:
 
 En el caso de *backend*, entrar en el proyecto y ejecutar la clase *VentaApplication*
 
+
+## Datos
+
+
+Hay un archivo csv que contiene 1.500.000, a poder ser la pagina web esta ambientada a ese csv a si que no se cambie.
+el archivo se encuentra en la raiz.
+
+Hay que crear una base de datos en mongo llamada *test*
+y una coleccion llamada *Ventas*
+
+sales.csv
