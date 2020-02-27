@@ -17,7 +17,7 @@ public class VentaController {
     @GetMapping()
     private Flux<Venta> getAllVentas() {
 
-        return repository.findAll();
+        return this.repository.findAll();
 
                // .map(venta -> ResponseEntity.ok())
                // .defaultIfEmpty(ResponseEntity.notFound().build());
@@ -25,15 +25,14 @@ public class VentaController {
 
     @GetMapping({"/{id}"})
     public Mono<ResponseEntity<Venta>> getVentaById(@PathVariable(value = "id") String id) {
-        return repository.findById(id)
+        return this.repository.findById(id)
                 .map(venta -> ResponseEntity.ok(venta))
                 .defaultIfEmpty(ResponseEntity.notFound().build());
     }
 
     @PostMapping()
     private Mono<ResponseEntity<Venta>> newVenta (Venta newVenta) {
-        System.out.println(newVenta);
-        return repository.save(newVenta)
+        return this.repository.save(newVenta)
     .map(ResponseEntity::ok)
                 .defaultIfEmpty(ResponseEntity.notFound().build());
     }
@@ -41,7 +40,7 @@ public class VentaController {
     @PutMapping("/{id}")
      public Mono<ResponseEntity<Venta>> updateVentaById(@PathVariable(value = "id") String id,
                     Venta venta) {
-        return repository.findById(id)
+        return this.repository.findById(id)
                 .flatMap(existingVenta -> {
                     venta.OrderId=existingVenta.OrderId;
                     existingVenta.Region=venta.Region;
@@ -58,7 +57,7 @@ public class VentaController {
                     existingVenta.UnitPrice=venta.UnitPrice;
                     existingVenta.UnitsSold=venta.UnitsSold;
 
-                    return repository.save(existingVenta);
+                    return this.repository.save(existingVenta);
                 })
                 .map(updatedVenta -> new ResponseEntity<>(updatedVenta, HttpStatus.OK))
                 .defaultIfEmpty(new ResponseEntity<>(HttpStatus.NOT_FOUND));
@@ -66,9 +65,9 @@ public class VentaController {
     @DeleteMapping("/{id}")
     public Mono<ResponseEntity<Venta>> deleteVenta(@PathVariable(value = "id") String id) {
 
-        return repository.findById(id)
+        return this.repository.findById(id)
                 .flatMap(venta ->
-                        repository.delete(venta)
+                        this.repository.delete(venta)
                                 .then(Mono.just(new ResponseEntity<Venta>(venta, HttpStatus.OK)))
                 )
                 .defaultIfEmpty(new ResponseEntity<>(HttpStatus.NOT_FOUND));
