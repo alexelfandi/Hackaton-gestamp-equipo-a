@@ -10,7 +10,7 @@ import javax.validation.constraints.NotNull;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Document(collection="users")
+@Document(collection="Usuarios")
 public class User {
     public String id;
     @NotNull
