@@ -52,9 +52,10 @@ const ELEMENT_DATA_CONST: PeriodicElement[] = [
 export class TableComponent implements OnInit {
 
   filterData;
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol', 'action'];
-  dataSource = new MatTableDataSource(ELEMENT_DATA);
+  displayedColumns: string[] = ['OrderID', 'Region', 'OrderDate', 'OrderPriority', 'action'];
+  dataSource;
   arrayVentas = [];
+  arrayVentas_Conts = [];
 
 
   @ViewChild(MatSort, {static: true}) sort: MatSort;
@@ -63,11 +64,16 @@ export class TableComponent implements OnInit {
   constructor(public dialog: MatDialog,private changeDetectorRefs: ChangeDetectorRef, private servicioVentas: VentasService) { }
 
   ngOnInit() {
-    this.dataSource.sort = this.sort;
-    this.dataSource.paginator = this.paginator;
+
     try {
       this.servicioVentas.getAll().subscribe((datos) =>{
         this.arrayVentas = datos;
+        this.dataSource = new MatTableDataSource(this.arrayVentas);
+        this.arrayVentas_Conts = datos;
+
+        this.dataSource.sort = this.sort;
+        this.dataSource.paginator = this.paginator;
+        console.log(this.arrayVentas);
       });
     } catch (error) {
       console.log(error);
@@ -109,13 +115,13 @@ export class TableComponent implements OnInit {
 
   search(term: string) {
     if(!term) {
-      this.filterData = ELEMENT_DATA_CONST;
+      this.filterData = this.arrayVentas_Conts;
       this.refresh();
     } else {
-      this.filterData = ELEMENT_DATA_CONST.filter(x => 
-         x.name.trim().toLowerCase().includes(term.trim().toLowerCase())
+      this.filterData = this.arrayVentas_Conts.filter(x => 
+         x.Region.trim().toLowerCase().includes(term.trim().toLowerCase())
       );
-      ELEMENT_DATA = this.filterData;
+      this.arrayVentas = this.filterData;
       this.refresh();
     }    
   }

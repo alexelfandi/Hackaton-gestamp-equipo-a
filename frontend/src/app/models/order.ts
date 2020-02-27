@@ -1,16 +1,16 @@
 export  class  Order {
-    region:string;
-    country:string;
-    itemType:string;
-    salesChannel:string;
-    orderPriority:string;
-    orderDate:Date;
-    orderId:string;
-    shipDate:Date;
-    unitsSold:number;
-    unitPrice:number;
-    unitCost:number;
-    totalRevenue:number;
-    totalCost:number;
-    totalProfit:number;
+    Region:string;
+    Country:string;
+    ItemType:string;
+    SalesChannel:string;
+    OrderPriority:string;
+    OrderDate:Date;
+    OrderID:number;
+    ShipDate:Date;
+    UnitsSold:number;
+    UnitPrice:number;
+    UnitCost:number;
+    TotalRevenue:number;
+    TotalCost:number;
+    TotalProfit:number;
 }

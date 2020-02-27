@@ -7,138 +7,138 @@
       <form #userForm="ngForm" (ngSubmit)="userForm.form.valid && onSubmit(userForm)">
         <div class="form-group">
             <strong>Region</strong>
-            <input type="text" class=" form-control" name="region" [(ngModel)]="order.region" #region="ngModel" placeholder="Region"
-              [ngClass]="{ 'is-invalid': userForm.submitted && region.invalid }" required>
-            <div *ngIf="userForm.submitted && region.invalid" class="invalid-feedback">
-              <div *ngIf="region.errors.required">Region obligatoria</div>
+            <input type="text" class=" form-control" name="Region" [(ngModel)]="order.Region" #Region="ngModel" placeholder="Region"
+              [ngClass]="{ 'is-invalid': userForm.submitted && Region.invalid }" required>
+            <div *ngIf="userForm.submitted && Region.invalid" class="invalid-feedback">
+              <div *ngIf="Region.errors.required">Region obligatoria</div>
             </div>
           </div>
     
         <div class="form-group">
             <strong>Country</strong>
-          <input type="text" class=" form-control" name="country" [(ngModel)]="order.country" #country="ngModel" placeholder="Country"
-            [ngClass]="{ 'is-invalid': userForm.submitted && country.invalid }" country required>
-          <div *ngIf="userForm.submitted && country.invalid" class="invalid-feedback">
-            <div *ngIf="country.errors.required">Country obligatorio</div>
+          <input type="text" class=" form-control" name="Country" [(ngModel)]="order.Country" #Country="ngModel" placeholder="Country"
+            [ngClass]="{ 'is-invalid': userForm.submitted && Country.invalid }" Country required>
+          <div *ngIf="userForm.submitted && Country.invalid" class="invalid-feedback">
+            <div *ngIf="Country.errors.required">Country obligatorio</div>
           </div>
         </div>
     
         <div class="form-group">
             <strong>Item Type</strong>
-          <input type="text" class=" form-control" name="itemType" [(ngModel)]="order.itemType" #itemType="ngModel" placeholder="Item Type"
-            [ngClass]="{ 'is-invalid': userForm.submitted && itemType.invalid }" itemType required>
-          <div *ngIf="userForm.submitted && itemType.invalid" class="invalid-feedback">
-            <div *ngIf="itemType.errors.required">itemType obligatorio</div>
+          <input type="text" class=" form-control" name="ItemType" [(ngModel)]="order.ItemType" #ItemType="ngModel" placeholder="Item Type"
+            [ngClass]="{ 'is-invalid': userForm.submitted && ItemType.invalid }" ItemType required>
+          <div *ngIf="userForm.submitted && ItemType.invalid" class="invalid-feedback">
+            <div *ngIf="ItemType.errors.required">ItemType obligatorio</div>
           </div>
         </div>
     
         <div class="form-group">
             <strong>Sales Channel</strong>
-          <select class=" form-control" name="salesChannel" [(ngModel)]="order.salesChannel" #salesChannel="ngModel" placeholder="Sales Channel"
-            [ngClass]="{ 'is-invalid': userForm.submitted && salesChannel.invalid }" salesChannel required>
+          <select class=" form-control" name="SalesChannel" [(ngModel)]="order.SalesChannel" #SalesChannel="ngModel" placeholder="Sales Channel"
+            [ngClass]="{ 'is-invalid': userForm.submitted && SalesChannel.invalid }" SalesChannel required>
                 <option value="disconnected">Offline</option>
                 <option value="Online">Online</option>
             </select>
 
             
-          <div *ngIf="userForm.submitted && salesChannel.invalid" class="invalid-feedback">
-            <div *ngIf="salesChannel.errors.required">salesChannel obligatorio</div>
+          <div *ngIf="userForm.submitted && SalesChannel.invalid" class="invalid-feedback">
+            <div *ngIf="SalesChannel.errors.required">SalesChannel obligatorio</div>
           </div>
         </div>
     
         <div class="form-group">
             <strong>Order Priority</strong>
-            <select  class=" form-control" name="orderPriority" [(ngModel)]="order.orderPriority" #orderPriority="ngModel" placeholder="Order Priority"
-            [ngClass]="{ 'is-invalid': userForm.submitted && orderPriority.invalid }" orderPriority required>
+            <select  class=" form-control" name="OrderPriority" [(ngModel)]="order.OrderPriority" #OrderPriority="ngModel" placeholder="Order Priority"
+            [ngClass]="{ 'is-invalid': userForm.submitted && OrderPriority.invalid }" OrderPriority required>
                 <option value="C">Critico</option>
                 <option value="H">Alta</option>
                 <option value="M">Media</option>
                 <option value="L">Baja</option>
             </select>
 
-          <div *ngIf="userForm.submitted && orderPriority.invalid" class="invalid-feedback">
-            <div *ngIf="orderPriority.errors.required">orderPriority obligatorio</div>
+          <div *ngIf="userForm.submitted && OrderPriority.invalid" class="invalid-feedback">
+            <div *ngIf="OrderPriority.errors.required">OrderPriority obligatorio</div>
           </div>
         </div>
     
         <div class="form-group">
             <strong>Order Date</strong>
-          <input type="date" class=" form-control" name="orderDate" [(ngModel)]="order.orderDate" #orderDate="ngModel" placeholder="Order Date"
-            [ngClass]="{ 'is-invalid': userForm.submitted && orderDate.invalid }" orderDate required>
-          <div *ngIf="userForm.submitted && orderDate.invalid" class="invalid-feedback">
-            <div *ngIf="orderDate.errors.required">orderDate obligatorio</div>
+          <input type="date" class=" form-control" name="OrderDate" [(ngModel)]="order.OrderDate" #OrderDate="ngModel" placeholder="Order Date"
+            [ngClass]="{ 'is-invalid': userForm.submitted && OrderDate.invalid }" OrderDate required>
+          <div *ngIf="userForm.submitted && OrderDate.invalid" class="invalid-feedback">
+            <div *ngIf="OrderDate.errors.required">OrderDate obligatorio</div>
           </div>
         </div>
     
         <div class="form-group">
             <strong>Order Id</strong>
-          <input type="text" class=" form-control" name="orderId" [(ngModel)]="order.orderId" #orderId="ngModel" placeholder="Order Id"
-            [ngClass]="{ 'is-invalid': userForm.submitted && orderId.invalid }" orderId required>
-          <div *ngIf="userForm.submitted && orderId.invalid" class="invalid-feedback">
-            <div *ngIf="orderId.errors.required">orderId obligatorio</div>
+          <input type="number" class=" form-control" name="OrderID" [(ngModel)]="order.OrderID" #OrderID="ngModel" placeholder="Order Id"
+            [ngClass]="{ 'is-invalid': userForm.submitted && OrderID.invalid }" OrderID required>
+          <div *ngIf="userForm.submitted && OrderID.invalid" class="invalid-feedback">
+            <div *ngIf="OrderID.errors.required">OrderID obligatorio</div>
           </div>
         </div>
     
         <div class="form-group">
             <strong>Ship Date</strong>
-          <input type="date" class=" form-control" name="shipDate" [(ngModel)]="order.shipDate" #shipDate="ngModel" placeholder="Ship Date"
-            [ngClass]="{ 'is-invalid': userForm.submitted && shipDate.invalid }" shipDate required>
-          <div *ngIf="userForm.submitted && shipDate.invalid" class="invalid-feedback">
-            <div *ngIf="shipDate.errors.required">shipDate obligatorio</div>
+          <input type="date" class=" form-control" name="ShipDate" [(ngModel)]="order.ShipDate" #ShipDate="ngModel" placeholder="Ship Date"
+            [ngClass]="{ 'is-invalid': userForm.submitted && ShipDate.invalid }" ShipDate required>
+          <div *ngIf="userForm.submitted && ShipDate.invalid" class="invalid-feedback">
+            <div *ngIf="ShipDate.errors.required">ShipDate obligatorio</div>
           </div>
         </div>
     
         <div class="form-group">
             <strong>Units Sold</strong>
-          <input type="number" class=" form-control" name="unitsSold" [(ngModel)]="order.unitsSold" #unitsSold="ngModel" placeholder="Units Sold"
-            [ngClass]="{ 'is-invalid': userForm.submitted && unitsSold.invalid }" unitsSold required>
-          <div *ngIf="userForm.submitted && unitsSold.invalid" class="invalid-feedback">
-            <div *ngIf="unitsSold.errors.required">unitsSold obligatorio</div>
+          <input type="number" class=" form-control" name="UnitsSold" [(ngModel)]="order.UnitsSold" #UnitsSold="ngModel" placeholder="Units Sold"
+            [ngClass]="{ 'is-invalid': userForm.submitted && UnitsSold.invalid }" UnitsSold required>
+          <div *ngIf="userForm.submitted && UnitsSold.invalid" class="invalid-feedback">
+            <div *ngIf="UnitsSold.errors.required">UnitsSold obligatorio</div>
           </div>
         </div>
     
         <div class="form-group">
             <strong>Unit Price</strong>
-          <input type="number" class=" form-control" name="unitPrice" [(ngModel)]="order.unitPrice" #unitPrice="ngModel" placeholder="Unit Price"
-            [ngClass]="{ 'is-invalid': userForm.submitted && unitPrice.invalid }" unitPrice required>
-          <div *ngIf="userForm.submitted && unitPrice.invalid" class="invalid-feedback">
-            <div *ngIf="unitPrice.errors.required">unitPrice obligatorio</div>
+          <input type="number" class=" form-control" name="UnitPrice" [(ngModel)]="order.UnitPrice" #UnitPrice="ngModel" placeholder="Unit Price"
+            [ngClass]="{ 'is-invalid': userForm.submitted && UnitPrice.invalid }" UnitPrice required>
+          <div *ngIf="userForm.submitted && UnitPrice.invalid" class="invalid-feedback">
+            <div *ngIf="UnitPrice.errors.required">UnitPrice obligatorio</div>
           </div>
         </div>
     
         <div class="form-group">
             <strong>Unit Cost</strong>
-          <input type="number" class=" form-control" name="unitCost" [(ngModel)]="order.unitCost" #unitCost="ngModel" placeholder="Unit Cost"
-            [ngClass]="{ 'is-invalid': userForm.submitted && unitCost.invalid }" unitCost required>
-          <div *ngIf="userForm.submitted && unitCost.invalid" class="invalid-feedback">
-            <div *ngIf="unitCost.errors.required">unitCost obligatorio</div>
+          <input type="number" class=" form-control" name="UnitCost" [(ngModel)]="order.UnitCost" #UnitCost="ngModel" placeholder="Unit Cost"
+            [ngClass]="{ 'is-invalid': userForm.submitted && UnitCost.invalid }" UnitCost required>
+          <div *ngIf="userForm.submitted && UnitCost.invalid" class="invalid-feedback">
+            <div *ngIf="UnitCost.errors.required">UnitCost obligatorio</div>
           </div>
         </div>
     
         <div class="form-group">
             <strong>Total Revenue</strong>
-          <input type="number" class=" form-control" name="totalRevenue" [(ngModel)]="order.totalRevenue" #totalRevenue="ngModel" placeholder="Total Revenue"
-            [ngClass]="{ 'is-invalid': userForm.submitted && totalRevenue.invalid }" totalRevenue required>
-          <div *ngIf="userForm.submitted && totalRevenue.invalid" class="invalid-feedback">
-            <div *ngIf="totalRevenue.errors.required">totalRevenue obligatorio</div>
+          <input type="number" class=" form-control" name="TotalRevenue" [(ngModel)]="order.TotalRevenue" #TotalRevenue="ngModel" placeholder="Total Revenue"
+            [ngClass]="{ 'is-invalid': userForm.submitted && TotalRevenue.invalid }" TotalRevenue required>
+          <div *ngIf="userForm.submitted && TotalRevenue.invalid" class="invalid-feedback">
+            <div *ngIf="TotalRevenue.errors.required">TotalRevenue obligatorio</div>
           </div>
         </div>
     
         <div class="form-group">
             <strong>Total Cost</strong>
-          <input type="number" class=" form-control" name="totalCost" [(ngModel)]="order.totalCost" #totalCost="ngModel" placeholder="Total Cost"
-            [ngClass]="{ 'is-invalid': userForm.submitted && totalCost.invalid }" totalCost required>
-          <div *ngIf="userForm.submitted && totalCost.invalid" class="invalid-feedback">
-            <div *ngIf="totalCost.errors.required">totalCost obligatorio</div>
+          <input type="number" class=" form-control" name="TotalCost" [(ngModel)]="order.TotalCost" #TotalCost="ngModel" placeholder="Total Cost"
+            [ngClass]="{ 'is-invalid': userForm.submitted && TotalCost.invalid }" TotalCost required>
+          <div *ngIf="userForm.submitted && TotalCost.invalid" class="invalid-feedback">
+            <div *ngIf="TotalCost.errors.required">TotalCost obligatorio</div>
           </div>
         </div>
     
         <div class="form-group">
             <strong>Total Profit</strong>
-          <input type="number" class=" form-control" name="totalProfit" [(ngModel)]="order.totalProfit" #totalProfit="ngModel" placeholder="Total Profit"
-            [ngClass]="{ 'is-invalid': userForm.submitted && totalProfit.invalid }" totalProfit required>
-          <div *ngIf="userForm.submitted && totalProfit.invalid" class="invalid-feedback">
-            <div *ngIf="totalProfit.errors.required">totalProfit obligatorio</div>
+          <input type="number" class=" form-control" name="TotalProfit" [(ngModel)]="order.TotalProfit" #TotalProfit="ngModel" placeholder="Total Profit"
+            [ngClass]="{ 'is-invalid': userForm.submitted && TotalProfit.invalid }" TotalProfit required>
+          <div *ngIf="userForm.submitted && TotalProfit.invalid" class="invalid-feedback">
+            <div *ngIf="TotalProfit.errors.required">TotalProfit obligatorio</div>
           </div>
         </div>
 

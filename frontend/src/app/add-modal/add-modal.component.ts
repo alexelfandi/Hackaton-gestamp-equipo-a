@@ -26,7 +26,8 @@ export class AddModalComponent implements OnInit {
   onSubmit(form) {
     console.log(form.value);
     this.orderService.add(form.value).subscribe((datos) => {
-      console.log("Hecho");
+      console.log(datos);
+
       
     })
   }
