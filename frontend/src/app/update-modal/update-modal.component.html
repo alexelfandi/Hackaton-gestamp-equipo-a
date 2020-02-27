@@ -50,6 +50,7 @@
             <strong>Order Priority</strong>
             <select  class=" form-control" name="orderPriority" [(ngModel)]="order.orderPriority" #orderPriority="ngModel" placeholder="Order Priority"
             [ngClass]="{ 'is-invalid': userForm.submitted && orderPriority.invalid }" orderPriority required>
+                <option value="C">Critico</option>
                 <option value="H">Alta</option>
                 <option value="M">Media</option>
                 <option value="L">Baja</option>
