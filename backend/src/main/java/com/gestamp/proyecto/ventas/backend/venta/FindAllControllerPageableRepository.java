@@ -6,5 +6,4 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface FindAllControllerPageableRepository extends PagingAndSortingRepository<Venta,String> {
 
-
 }

@@ -15,7 +15,7 @@ public class FindAllControllerPageable {
  private FindAllControllerPageableRepository repository;
     @GetMapping()
     private Mono<Page<Venta>> getAllVentas(@RequestParam(name="page", defaultValue="0")Integer page,
-                                           @RequestParam(name="size", defaultValue = "10") Integer size) {
+                                           @RequestParam(name="size", defaultValue = "20") Integer size) {
         return Mono.just(this.repository.findAll(PageRequest.of(page,size))) ;
 
         // .map(venta -> ResponseEntity.ok())
