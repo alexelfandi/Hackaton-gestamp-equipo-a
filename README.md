@@ -19,4 +19,10 @@ Lo primero, seria descargar los paquetes desde la carpeta frontend y backend
 
 ## Iniciar proyectos
 
-Desde las carpetas de frontend y backend
+Desde la carpeta de *frontend*, ejecutar el comando:
+
+`ng serve`
+
+
+En el caso de *backend*, entrar en el proyecto y ejecutar la clase *VentaApplication*
+

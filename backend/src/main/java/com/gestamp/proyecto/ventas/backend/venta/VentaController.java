@@ -26,6 +26,15 @@ public class VentaController {
                // .defaultIfEmpty(ResponseEntity.notFound().build());
     }
 
+    @GetMapping("first")
+    private Flux<Venta> getfirst() {
+        System.out.println(this.repository.findAll());
+        return this.repository.findAll().limitRequest(20);
+
+        // .map(venta -> ResponseEntity.ok())
+        // .defaultIfEmpty(ResponseEntity.notFound().build());
+    }
+
     @GetMapping({"/{id}"})
     public Mono<ResponseEntity<Venta>> getVentaById(@PathVariable(value = "id") String id) {
         return this.repository.findById(id)
