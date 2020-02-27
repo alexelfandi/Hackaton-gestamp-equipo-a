@@ -45,8 +45,8 @@ public class Venta {
     public Date OrderDate;
     @NotNull
     @NotBlank
-    @Field("OrderId")
-    public String OrderId;
+    @Field("OrderID")
+    public Integer OrderID;
     @NotNull
     @NotBlank
     @Field("ShipDate")

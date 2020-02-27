@@ -16,7 +16,7 @@ public class VentaController {
 
     @GetMapping()
     private Flux<Venta> getAllVentas() {
-
+        System.out.println(this.repository.findAll());
         return this.repository.findAll();
 
                // .map(venta -> ResponseEntity.ok())
@@ -43,7 +43,7 @@ public class VentaController {
                     Venta venta) {
         return this.repository.findById(id)
                 .flatMap(existingVenta -> {
-                    venta.OrderId=existingVenta.OrderId;
+                    venta.OrderID=existingVenta.OrderID;
                     existingVenta.Region=venta.Region;
                     existingVenta.Country=venta.Country;
                     existingVenta.ItemType=venta.ItemType;
