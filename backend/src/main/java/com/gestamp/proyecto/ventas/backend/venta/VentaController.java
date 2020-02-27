@@ -11,7 +11,7 @@ import reactor.core.publisher.Mono;
 
 @RestController
 @RequestMapping("/ventas")
-@CrossOrigin(origins = "*", methods = {RequestMethod.DELETE, RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT})
+@CrossOrigin(origins = "http://localhost:4200/", methods = {RequestMethod.DELETE, RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT})
 public class VentaController {
     @Autowired
     private ReactiveVentaRepository repository;
@@ -24,6 +24,15 @@ public class VentaController {
 
                // .map(venta -> ResponseEntity.ok())
                // .defaultIfEmpty(ResponseEntity.notFound().build());
+    }
+
+    @GetMapping("first")
+    private Flux<Venta> getfirst() {
+        System.out.println(this.repository.findAll());
+        return this.repository.findAll().limitRequest(20);
+
+        // .map(venta -> ResponseEntity.ok())
+        // .defaultIfEmpty(ResponseEntity.notFound().build());
     }
 
     @GetMapping({"/{id}"})
