@@ -31,7 +31,7 @@ En el caso de *backend*, entrar en el proyecto y ejecutar la clase *VentaApplica
 
 
 Hay un archivo csv que contiene 1.500.000, el proyecto esta ambientado a ese csv a si que a poder ser que no se cambie.
-el archivo se encuentra en el directorio raiz, en un archivo zip, descomprimalo
+El archivo se encuentra en el directorio raiz, en un archivo zip, descomprimalo.
 
 Hay que crear una base de datos en mongo llamada *test*
 y una coleccion llamada *Ventas*
