@@ -70,7 +70,7 @@ public class VentaController {
                 .defaultIfEmpty(new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
     @DeleteMapping("/{id}")
-    public Mono<ResponseEntity<Venta>> deleteVenta(@PathVariable(value = "id") String id) {
+    public Mono<ResponseEntity<Venta>> deleteVenta(@PathVariable("id") String id) {
 
         return this.repository.findById(id)
                 .flatMap(venta ->
