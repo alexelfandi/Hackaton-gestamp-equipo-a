@@ -1,6 +1,8 @@
 package com.gestamp.proyecto.ventas.backend.venta;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -15,16 +17,6 @@ import reactor.core.publisher.Mono;
 public class VentaController {
     @Autowired
     private ReactiveVentaRepository repository;
-
-
-    @GetMapping()
-    private Flux<Venta> getAllVentas() {
-        System.out.println(this.repository.findAll());
-        return this.repository.findAll();
-
-               // .map(venta -> ResponseEntity.ok())
-               // .defaultIfEmpty(ResponseEntity.notFound().build());
-    }
 
     @GetMapping("first")
     private Flux<Venta> getfirst() {
