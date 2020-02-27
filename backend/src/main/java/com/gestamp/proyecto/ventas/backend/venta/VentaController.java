@@ -31,7 +31,8 @@ public class VentaController {
     }
 
     @PostMapping()
-    private Mono<ResponseEntity<Venta>> newVenta (Venta newVenta) {
+    private Mono<ResponseEntity<Venta>> newVenta(@RequestBody Venta newVenta) {
+        System.out.println(newVenta);
         return this.repository.save(newVenta)
     .map(ResponseEntity::ok)
                 .defaultIfEmpty(ResponseEntity.notFound().build());
