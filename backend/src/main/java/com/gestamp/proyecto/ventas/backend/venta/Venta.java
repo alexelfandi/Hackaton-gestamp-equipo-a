@@ -3,6 +3,7 @@ package com.gestamp.proyecto.ventas.backend.venta;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
@@ -18,6 +19,8 @@ public class Venta {
     //Region,Country,Item
     //Type,Sales Channel,Order Priority,Order Date,Order ID,Ship Date,Units
     //Sold,Unit Price,Unit Cost,Total Revenue,Total Cost,Total Profit.
+    @Id
+    private String id;
 
     @NotNull
     @NotBlank
