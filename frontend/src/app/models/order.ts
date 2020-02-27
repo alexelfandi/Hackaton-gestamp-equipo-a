@@ -13,4 +13,5 @@ export  class  Order {
     TotalRevenue:number;
     TotalCost:number;
     TotalProfit:number;
+    
 }

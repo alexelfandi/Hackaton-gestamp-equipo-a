@@ -5,7 +5,9 @@ table {
   th.mat-sort-header-sorted {
     color: black;
   }
-
+table * {
+  font-size: 1.2vw;
+}
 .space{
   margin-left: 10px;
 }

@@ -1,15 +1,48 @@
-<h1 mat-dialog-title>{{data.item.name}}</h1>
+<h1 mat-dialog-title>{{data.item.OrderID}}</h1>
 <div mat-dialog-content>
-  <b>Information about {{data.item.name}}:</b>
+  <b>Information about {{data.item.OrderID}}:</b>
   <ul>
     <li>
-      <strong>Name: </strong>{{ data.item.name }}
+      <strong>Order ID: </strong>{{ data.item.OrderID }}
     </li>
     <li>
-      <strong>Weight: </strong>{{ data.item.weight }}
+      <strong>Region: </strong>{{ data.item.Region }}
     </li>
     <li>
-      <strong>Symbol: </strong>{{ data.item.symbol }}
+      <strong>Country: </strong>{{ data.item.Country }}
+    </li>
+    <li>
+      <strong>Item Type: </strong>{{ data.item.ItemType }}
+    </li>
+    <li>
+      <strong>Sales Channel: </strong>{{ data.item.SalesChannel }}
+    </li>
+    <li>
+      <strong>Order Priority: </strong>{{ data.item.OrderPriority }}
+    </li>
+    <li>
+      <strong>Order Date: </strong>{{ data.item.OrderDate }}
+    </li>
+    <li>
+      <strong>Ship Date: </strong>{{ data.item.ShipDate }}
+    </li>
+    <li>
+      <strong>Units Sold: </strong>{{ data.item.UnitsSold }}
+    </li>
+    <li>
+      <strong>Unit Price: </strong>{{ data.item.UnitPrice }}
+    </li>
+    <li>
+      <strong>Unit Cost: </strong>{{ data.item.UnitCost }}
+    </li>
+    <li>
+      <strong>Total Revenue: </strong>{{ data.item.TotalRevenue }}
+    </li>
+    <li>
+      <strong>Total Cost: </strong>{{ data.item.TotalCost }}
+    </li>
+    <li>
+      <strong>Total Profit: </strong>{{ data.item.TotalProfit }}
     </li>
   </ul>
   

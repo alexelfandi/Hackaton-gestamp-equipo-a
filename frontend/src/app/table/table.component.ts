@@ -66,7 +66,7 @@ export class TableComponent implements OnInit {
   ngOnInit() {
 
     try {
-      this.servicioVentas.getAll().subscribe((datos) =>{
+      this.servicioVentas.getFirsts().subscribe((datos) =>{
         this.arrayVentas = datos;
         this.dataSource = new MatTableDataSource(this.arrayVentas);
         this.arrayVentas_Conts = datos;

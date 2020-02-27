@@ -29,4 +29,8 @@ export class VentasService {
     return this.http.post("http://localhost:8080/ventas", object)
   }
 
+  public getFirsts(): Observable<any>  {
+    return this.http.get("http://localhost:8080/ventas/first");
+  }
+
 }
