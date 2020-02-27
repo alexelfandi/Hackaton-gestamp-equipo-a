@@ -6,6 +6,7 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dial
 import { InfoModalComponent } from '../info-modal/info-modal.component';
 import { VentasService } from '../services/ventas.service';
 import { UpdateModalComponent } from './../update-modal/update-modal.component';
+import { AddModalComponent } from './../add-modal/add-modal.component';
 
 
 export interface PeriodicElement {
@@ -84,8 +85,16 @@ export class TableComponent implements OnInit {
 
   updateItem(selectedItem): void {
     const dialogRef = this.dialog.open(UpdateModalComponent, {
-      width: '400px',
+      width: '500px',
+      height: '600px',
       data: { item: selectedItem }
+    });
+  }
+
+  addItem(): void {
+    const dialogRef = this.dialog.open(AddModalComponent, {
+      width: '500px',
+      height: '600px',
     });
   }
 

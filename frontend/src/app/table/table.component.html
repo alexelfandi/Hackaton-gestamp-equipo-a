@@ -1,4 +1,6 @@
 
+<button type="button" expand="block" class="add-button btn btn-primary" (click)="addItem()">Añadir Venta</button>
+
 <input class="form-control" type="text" placeholder="Filtra por nombre" (keyup)='search($event.target.value)' aria-label="Search">
 
 <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
