@@ -1,4 +1,5 @@
 export  class  Order {
+    id:string;
     Region:string;
     Country:string;
     ItemType:string;
@@ -13,5 +14,5 @@ export  class  Order {
     TotalRevenue:number;
     TotalCost:number;
     TotalProfit:number;
-    
+
 }

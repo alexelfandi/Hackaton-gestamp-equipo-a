@@ -36,7 +36,7 @@
             <strong>Sales Channel</strong>
           <select class=" form-control" name="SalesChannel" [(ngModel)]="order.SalesChannel" #SalesChannel="ngModel" placeholder="Sales Channel"
             [ngClass]="{ 'is-invalid': userForm.submitted && SalesChannel.invalid }" SalesChannel required>
-                <option value="disconnected">Offline</option>
+                <option value="Offline">Offline</option>
                 <option value="Online">Online</option>
             </select>
 

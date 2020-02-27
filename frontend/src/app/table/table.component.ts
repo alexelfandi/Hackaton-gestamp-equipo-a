@@ -94,7 +94,22 @@ export class TableComponent implements OnInit {
       width: '500px',
       height: '600px',
       data: { item: selectedItem }
+    }).afterClosed().subscribe((datos)=>{
+      console.log(datos);
+
+      this.servicioVentas.getFirsts().subscribe((datos) =>{
+        this.arrayVentas = datos;
+        this.dataSource = new MatTableDataSource(this.arrayVentas);
+        this.arrayVentas_Conts = datos;
+
+        this.dataSource.sort = this.sort;
+        this.dataSource.paginator = this.paginator;
+        console.log(this.arrayVentas);
+      });
+      
     });
+
+    
   }
 
   addItem(): void {
@@ -106,7 +121,18 @@ export class TableComponent implements OnInit {
 
   deleteItem(item){
     console.log("Deleting " + item);
-    
+    this.servicioVentas.delete(item.id).subscribe((datos) => {
+      console.log(datos);
+      this.servicioVentas.getFirsts().subscribe((datos) =>{
+        this.arrayVentas = datos;
+        this.dataSource = new MatTableDataSource(this.arrayVentas);
+        this.arrayVentas_Conts = datos;
+
+        this.dataSource.sort = this.sort;
+        this.dataSource.paginator = this.paginator;
+        console.log(this.arrayVentas);
+      });
+    });
   }
 
   refresh() {

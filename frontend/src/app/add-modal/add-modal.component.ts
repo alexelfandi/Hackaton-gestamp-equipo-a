@@ -27,7 +27,7 @@ export class AddModalComponent implements OnInit {
     console.log(form.value);
     this.orderService.add(form.value).subscribe((datos) => {
       console.log(datos);
-
+      this.closeModal();
       
     })
   }

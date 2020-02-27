@@ -21,8 +21,10 @@ export class VentasService {
     return this.http.delete("http://localhost:8080/ventas/" + id)
   }
 
-  public modify(object: Order): Observable<any> {
-    return this.http.put("http://localhost:8080/ventas", object)
+  public modify(id:any, object: Order): Observable<any> {
+    console.log(id);
+    
+    return this.http.put("http://localhost:8080/ventas/" + id, object)
   }
 
   public add(object: Order):  Observable<any> {
