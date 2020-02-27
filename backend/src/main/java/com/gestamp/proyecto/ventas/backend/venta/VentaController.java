@@ -40,9 +40,12 @@ public class VentaController {
 
     @PutMapping("/{id}")
      public Mono<ResponseEntity<Venta>> updateVentaById(@PathVariable(value = "id") String id,
-                    Venta venta) {
+                 @RequestBody Venta venta) {
+        System.out.println(venta);
+        System.out.println(id);
         return this.repository.findById(id)
                 .flatMap(existingVenta -> {
+
                     venta.OrderID=existingVenta.OrderID;
                     existingVenta.Region=venta.Region;
                     existingVenta.Country=venta.Country;
