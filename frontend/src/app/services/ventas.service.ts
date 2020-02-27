@@ -22,11 +22,11 @@ export class VentasService {
   }
 
   public modify(object: Order): Observable<any> {
-    return this.http.put("http://localhost:8080/ventas", object)
+    return this.http.post("http://localhost:8080/ventas", object)
   }
 
   public add(object: Order):  Observable<any> {
-    return this.http.put("http://localhost:8080/ventasAdd", object)
+    return this.http.put("http://localhost:8080/ventas", object)
   }
 
 }
