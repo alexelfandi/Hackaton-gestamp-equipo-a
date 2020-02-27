@@ -9,3 +9,10 @@ table {
 .space{
   margin-left: 10px;
 }
+
+.add-button{
+  /*margin-top: 10px;
+  margin-bottom: 10px;*/
+  border-radius: 0px;
+  width: 100%;
+}
