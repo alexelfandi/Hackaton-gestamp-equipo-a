@@ -17,7 +17,7 @@ import { InfoModalComponent } from './info-modal/info-modal.component';
 
 import { MatDialogModule } from '@angular/material/dialog';
 import { HttpClientModule } from '@angular/common/http';
-
+import { UpdateModalComponent } from './update-modal/update-modal.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +26,8 @@ import { HttpClientModule } from '@angular/common/http';
     IndexComponent,
     RegisterComponent,
     TableComponent,
-    InfoModalComponent
+    InfoModalComponent,
+    UpdateModalComponent
     
   ],
   imports: [
@@ -44,6 +45,6 @@ import { HttpClientModule } from '@angular/common/http';
   providers: [],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  entryComponents: [InfoModalComponent]
+  entryComponents: [InfoModalComponent, UpdateModalComponent]
 })
 export class AppModule { }

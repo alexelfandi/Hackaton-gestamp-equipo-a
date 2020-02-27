@@ -5,6 +5,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { InfoModalComponent } from '../info-modal/info-modal.component';
 import { VentasService } from '../services/ventas.service';
+import { UpdateModalComponent } from './../update-modal/update-modal.component';
 
 
 export interface PeriodicElement {
@@ -76,6 +77,13 @@ export class TableComponent implements OnInit {
 
   openDialog(selectedItem): void {
     const dialogRef = this.dialog.open(InfoModalComponent, {
+      width: '400px',
+      data: { item: selectedItem }
+    });
+  }
+
+  updateItem(selectedItem): void {
+    const dialogRef = this.dialog.open(UpdateModalComponent, {
       width: '400px',
       data: { item: selectedItem }
     });
