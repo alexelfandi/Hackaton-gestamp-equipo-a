@@ -63,7 +63,7 @@
   
       <div class="form-group">
           <strong>Order Date</strong>
-        <input type="date" class=" form-control" name="OrderDate" [(ngModel)]="order.OrderDate" #OrderDate="ngModel" placeholder="Order Date"
+        <input  type="date" class=" form-control" name="OrderDate" [(ngModel)]="dateObject.orderDate" #OrderDate="ngModel" placeholder="Order Date"
           [ngClass]="{ 'is-invalid': userForm.submitted && OrderDate.invalid }" OrderDate required>
         <div *ngIf="userForm.submitted && OrderDate.invalid" class="invalid-feedback">
           <div *ngIf="OrderDate.errors.required">OrderDate obligatorio</div>
@@ -81,7 +81,7 @@
   
       <div class="form-group">
           <strong>Ship Date</strong>
-        <input type="date" class=" form-control" name="ShipDate" [(ngModel)]="order.ShipDate" #ShipDate="ngModel" placeholder="Ship Date"
+        <input type="date" class=" form-control" name="ShipDate" [(ngModel)]="dateObject.shipDate" #ShipDate="ngModel" placeholder="Ship Date"
           [ngClass]="{ 'is-invalid': userForm.submitted && ShipDate.invalid }" ShipDate required>
         <div *ngIf="userForm.submitted && ShipDate.invalid" class="invalid-feedback">
           <div *ngIf="ShipDate.errors.required">ShipDate obligatorio</div>
